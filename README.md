@@ -1,7 +1,7 @@
 # Lighthouse
 
-Lighthouse is the SDK that connects Passworks.io beacons service to your iOS application.
-In the Passworks.io dashboard you can add your own beacons, manage your tags and the events associated with beacon entry or exit.
+Lighthouse is the SDK that connects Passworks.io beacons service ([http://beacons.passworks.io](http://beacons.passworks.io)) to your iOS application.
+In the Passworks.io dashboard you can add your own beacons, manage your tags (premises/virtual areas) and the events associated with beacon entry or exit.
 
 ## Setup
 
@@ -9,6 +9,7 @@ In the Passworks.io dashboard you can add your own beacons, manage your tags and
 
 To setup the SDK all you are required to do is call `setupWithToken:` on your application's `AppDelegate` subclass on the `application:didFinishLaunchingWithOptions:` method.
 
+Objective-C:
 ```objective-c
 - (BOOL)application:(UIApplication *)application 
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -16,6 +17,8 @@ To setup the SDK all you are required to do is call `setupWithToken:` on your ap
   // The rest of your code goes here...
 }
 ```
+
+Swift:
 
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -42,9 +45,13 @@ To make sure your application can trigger events on nearby beacons while it is i
 
 Lighthouse allows your app to be on the lookout for nearby beacons, as such, it requires you to turn on the beacon scanning feature by calling the `lightUp` method on Lighthouse.
 
+Objective-C:
+
 ```objective-c
 [[Lighthouse sharedInstance] lightUp];
 ```
+
+Swift:
 
 ```swift
 Lighthouse.sharedInstance().lightUp()
@@ -68,9 +75,13 @@ Lighthouse.sharedInstance().turnOff()
 
 Lighthouse updates its database in several cases, when the SDK is setup, when the application returns to foreground or when an explicit call to `refresh` is triggered. This will then refresh all the beacons, events and tags set in the Passworks.io dashboard.
 
+Objective-C:
+
 ```objective-c
 [[Lighthouse sharedInstance] refresh];
 ```
+
+Swift:
 
 ```swift
 Lighthouse.sharedInstance().refresh()
@@ -82,10 +93,13 @@ Lighthouse will adopt the behavior defined in the Passworks.io dashboard, so any
 
 To set a delegate just set the property on the SDK.
 
+Objective-C:
+
 ```objective-c
 [Lighthouse sharedInstance].delegate = self;
 ```
 
+Swift:
 ```swift
 Lighthouse.sharedInstance().delegate = self
 ```
@@ -174,9 +188,13 @@ The `LHEvent` model represents the behavior of the Lighthouse framework when it 
 
 Lighthouse allows the developer to choose whether to display logs or not, this can be set with the `setVerbose:` call. Verbose mode is enabled by default in debug builds and disabled otherwise.
 
+Objective-C:
+
 ```objective-c
 [Lighthouse setVerbose:YES];
 ```
+
+Swift:
 
 ```swift
 Lighthouse.setVerbose(true)
