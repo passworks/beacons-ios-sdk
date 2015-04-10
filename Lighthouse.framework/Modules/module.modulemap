@@ -1,0 +1,6 @@
+framework module Lighthouse {
+  umbrella header "Lighthouse.h"
+
+  export *
+  module * { export * }
+}
