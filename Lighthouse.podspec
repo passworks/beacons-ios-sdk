@@ -18,4 +18,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'Lighthouse.framework'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited)' }
   s.preserve_paths = 'Lighthouse.framework'
+  s.resources = 'Lighthouse.bundle'
 end
