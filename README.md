@@ -1,7 +1,15 @@
-# Lighthouse
+# Lighthouse<sup>beta</sup>
 
 Lighthouse is the SDK that connects Passworks.io beacons service ([http://beacons.passworks.io](http://beacons.passworks.io)) to your iOS application.
 In the Passworks.io dashboard you can add your own beacons, manage your tags (premises/virtual areas) and the events associated with beacon entry or exit.
+
+> Please be advised that the current SDK is in beta so it's not production ready and features my change in the future without notice.
+
+> While in beta if you wish to receive notifications about new builds of the SDK please send an e-mail to support@passworks.io
+
+## Integration
+
+Drag `Lighthouse.bundle` and `Lighthouse.framework` to 'Frameworks' in your workspace. If prompted, check the "Copy items to destination's group folder" checkbox to make sure the framework and the resources are copied to your project.
 
 ## Setup
 
