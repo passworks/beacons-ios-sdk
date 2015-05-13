@@ -1,0 +1,5 @@
+inhibit_all_warnings!
+
+platform :ios, '7.0'
+
+pod 'Lighthouse', :git => 'git://github.com/passworks/lighthouse-ios-sdk'

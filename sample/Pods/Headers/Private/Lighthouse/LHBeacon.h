@@ -1,0 +1,1 @@
+../../../Lighthouse/Lighthouse.framework/Versions/A/Headers/LHBeacon.h

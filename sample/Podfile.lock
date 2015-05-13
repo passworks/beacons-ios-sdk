@@ -1,0 +1,19 @@
+PODS:
+  - Lighthouse (1.0)
+
+DEPENDENCIES:
+  - Lighthouse (from `git://github.com/passworks/lighthouse-ios-sdk`)
+
+EXTERNAL SOURCES:
+  Lighthouse:
+    :git: git://github.com/passworks/lighthouse-ios-sdk
+
+CHECKOUT OPTIONS:
+  Lighthouse:
+    :commit: 1f1c0d7514c88096e12a590c9df460caa83f8f22
+    :git: git://github.com/passworks/lighthouse-ios-sdk
+
+SPEC CHECKSUMS:
+  Lighthouse: de9bb5198b7d61e3c3a31648a52ec8834bafb70b
+
+COCOAPODS: 0.37.0
