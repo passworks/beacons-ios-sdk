@@ -15,8 +15,6 @@ Pod::Spec.new do |s|
   s.library = 'z'
   s.requires_arc = true
   s.public_header_files = 'Lighthouse.framework/Headers/*.h'
-  s.ios.vendored_frameworks = 'Lighthouse.framework'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited)' }
-  s.preserve_paths = 'Lighthouse.framework'
+  s.vendored_frameworks = 'Lighthouse.framework'
   s.resource_bundles = { 'Lighthouse' => 'Lighthouse.bundle/*' }
 end
