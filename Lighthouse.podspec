@@ -14,9 +14,7 @@ Pod::Spec.new do |s|
   s.frameworks = %w(Foundation UIKit SystemConfiguration CoreLocation CoreData Passkit)
   s.library = 'z'
   s.requires_arc = true
-  s.source_files = 'Lighthouse.framework/Versions/A/Headers/*.h'
   s.ios.vendored_frameworks = 'Lighthouse.framework'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited)' }
-  s.preserve_paths = 'Lighthouse.framework'
+  s.ios.public_header_files = 'Lighthouse.framework/Headers/*.h'
   s.resources = 'Lighthouse.bundle'
 end
