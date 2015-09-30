@@ -10,6 +10,8 @@
 
 #import "LHAppModel.h"
 
+@class LHUser;
+
 @interface LHApp (Private)
 
 + (instancetype)app;
@@ -19,6 +21,6 @@
 + (instancetype)appWithModel:(LHAppModel *)model;
 + (instancetype)appWithJSON:(id)json;
 
-+ (void)requestApp:(void(^)(LHApp *app))handler;
++ (void)requestAppWithUser:(LHUser *)user completion:(void(^)(LHApp *app))completion;
 
 @end

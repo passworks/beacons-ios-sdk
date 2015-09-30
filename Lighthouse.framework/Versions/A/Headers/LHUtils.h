@@ -95,4 +95,12 @@
  */
 + (NSString *)stringFromDate:(NSDate *)date dateOnly:(BOOL)dateOnly;
 
++ (NSDate *)dateFromString:(NSString *)dateString;
+
++ (NSDate *)timeFromDate:(NSDate *)date;
+
++ (NSUInteger)currentWeekday;
+
++ (id)json:(id)json key:(NSString *)key;
+
 @end
