@@ -8,6 +8,7 @@
 
 #import "Lighthouse.h"
 
+#import "LHUser.h"
 #import "LHNotificationsManager.h"
 
 extern NSString *const LighthouseVersion;
@@ -17,5 +18,6 @@ extern NSString *const LighthouseVersion;
 + (void)reset;
 
 @property (nonatomic, strong, readonly) LHNotificationsManager *notificationsManager;
+@property (nonatomic, strong, readonly) LHUser *user;
 
 @end
