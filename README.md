@@ -1,4 +1,4 @@
-# Lighthouse<sup>beta</sup>
+# Passworks Beacon Management Platform
 
 Lighthouse is the SDK that connects Passworks.io beacons service ([http://beacons.passworks.io](http://beacons.passworks.io)) to your iOS application.
 In the Passworks.io dashboard you can add your own beacons, manage your tags (premises/virtual areas) and the events associated with beacon entry or exit.
