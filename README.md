@@ -185,16 +185,16 @@ The `LHEvent` model represents the behavior of the Lighthouse framework when it 
 
 | attribute  | type | description |
 |------------|------|-----------|
-| `identifier` | Int  | the event identifier in Passworks.io.
-|  `name`: String - the event name.
-|  `proximity` | CLProximity  | the proximity in which the event should be triggered.
-|  `triggerOn` | LHEventTrigger  | a switch between `Enter` or `Exit` in which the event should be triggered.
-|  `triggerOnce` | Bool  | `true` in case the event should only be triggerd if it has passed the maximum `timeout` for all the tags associated with the beacon's tags, `false` in case it should consider its timeout as the `timeout`
-|  `type` | LHEventType  | a switch between `URL`, `Notification`, `Webhook`, `Image` and `Passbook`, which will correspond to the action to take when the user opens up the local notification triggered by the event.
-|  `triggeredAt` | NSDate  | a timestamp for when the event was last triggered.
-|  `timeout` | Int  | the timeout to which the framework should not trigger multiple times the same event.
-|  `payload` | String  | the content to use in the notification action.
-|  `notificationMessage` |  String  | the message to be presented to the user on the notification.
+| identifier | Int  | the event identifier in Passworks.io.
+|  name | String | the event name.
+|  proximity | CLProximity  | the proximity in which the event should be triggered.
+|  triggerOn | LHEventTrigger  | a switch between `Enter` or `Exit` in which the event should be triggered.
+|  triggerOnce | Bool  | `true` in case the event should only be triggerd if it has passed the maximum `timeout` for all the tags associated with the beacon's tags, `false` in case it should consider its timeout as the `timeout`
+|  type | LHEventType  | a switch between `URL`, `Notification`, `Webhook`, `Image` and `Passbook`, which will correspond to the action to take when the user opens up the local notification triggered by the event.
+|  triggeredAt | NSDate  | a timestamp for when the event was last triggered.
+|  timeout | Int  | the timeout to which the framework should not trigger multiple times the same event.
+|  payload | String  | the content to use in the notification action.
+|  notificationMessage |  String  | the message to be presented to the user on the notification.
 
 ## Logging
 
