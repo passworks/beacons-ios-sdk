@@ -76,7 +76,7 @@
  *  logout serves the purpose of considering the user from that point on as an 
  *  anonymous user.
  */
-- (void)logout;
+- (void)logoutUser;
 
 /**
  *  identifyUser serves the purpose of considering the user from that point on as an
