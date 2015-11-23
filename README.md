@@ -1,4 +1,4 @@
-# Lighthouse<sup>beta</sup>
+# Passworks Beacon Management Platform
 
 Lighthouse is the SDK that connects Passworks.io beacons service ([http://beacons.passworks.io](http://beacons.passworks.io)) to your iOS application.
 In the Passworks.io dashboard you can add your own beacons, manage your tags (premises/virtual areas) and the events associated with beacon entry or exit.
@@ -156,41 +156,45 @@ The Lighthouse `sharedInstance` contains properties for `beacons`, `beaconsInRan
 
 The `LHTag` model represents the tags associated with beacons, in order to create **sessions**. It is composed by:
 
-- `identifier`: Int - the tag identifier in Passworks.io.
-- `name`: String - the tag name.
-- `timeout`: Int - the timeout for closing sessions.
-- `lastSeenAt`: NSDate - the timestamp for the last time the tag was found.
-- `sessionId`: String - a unique session identifier randomly generated.
+| attribute  | type | description |
+|------------|------|-----------|
+| identifier | Int  | the tag identifier in Passworks.io.
+| name | String | the tag name.
+| timeout | Int | the timeout for closing sessions.
+| lastSeenAt | NSDate  | the timestamp for the last time the tag was found.
+| sessionId | String  | a unique session identifier randomly generated.
 
 ### LHBeacon
 
-The `LHBeacon` model represents the physical beacons and is composed by:
-
-- `identifier`: Int - the beacon identifier in Passworks.io.
-- `name`: String - the beacon name.
-- `uuid`: String - the UUID set in the physical beacon.
-- `major`: Int - the major identifier set in the physical beacon.
-- `minor`: Int - the minor identifier set in the physical beacon.
-- `vendorName`: String - the name of the beacon's vendor.
-- `vendorSlug`: String - the slug of the beacon's vendor.
-- `tags`: [LHTag] - an array containing all the associated `LHTag` objects.
-- `events`: [LHEvent] - an array containing all the associated `LHEvent` objects.
-- `proximity`: CLProximity - the current proximity of the beacon.
+| attribute  | type | description |
+|------------|------|-----------|
+| identifier | Int  | the beacon identifier in Passworks.io.
+| name | String  | the beacon name.
+| uuid | String  | the UUID set in the physical beacon.
+| major | Int  | the major identifier set in the physical beacon.
+| minor | Int  | the minor identifier set in the physical beacon.
+| vendorName | String  | the name of the beacon's vendor.
+| vendorSlug | String  | the slug of the beacon's vendor.
+| tags | [LHTag]  | an array containing all the associated `LHTag` objects.
+| events | [LHEvent]  | an array containing all the associated `LHEvent` objects.
+| proximity | CLProximity  | the current proximity of the beacon.
 
 ### LHEvent
 
 The `LHEvent` model represents the behavior of the Lighthouse framework when it encounters a `LHBeacon`. When certain conditions align the `LHEvent` should be triggered and a notification will be shown to the user. The model is composed by:
 
-- `identifier`: Int - the event identifier in Passworks.io.
-- `name`: String - the event name.
-- `proximity`: CLProximity - the proximity in which the event should be triggered.
-- `triggerOn`: LHEventTrigger - a switch between `Enter` or `Exit` in which the event should be triggered.
-- `triggerOnce`: Bool - `true` in case the event should only be triggerd if it has passed the maximum `timeout` for all the tags associated with the beacon's tags, `false` in case it should consider its timeout as the `timeout`
-- `type`: LHEventType - a switch between `URL`, `Notification`, `Webhook`, `Image` and `Passbook`, which will correspond to the action to take when the user opens up the local notification triggered by the event.
-- `triggeredAt`: NSDate - a timestamp for when the event was last triggered.
-- `timeout`: Int - the timeout to which the framework should not trigger multiple times the same event.
-- `payload`: String - the content to use in the notification action.
-- `notificationMessage`: String - the message to be presented to the user on the notification.
+| attribute  | type | description |
+|------------|------|-----------|
+| identifier | Int  | the event identifier in Passworks.io.
+|  name | String | the event name.
+|  proximity | CLProximity  | the proximity in which the event should be triggered.
+|  triggerOn | LHEventTrigger  | a switch between `Enter` or `Exit` in which the event should be triggered.
+|  triggerOnce | Bool  | `true` in case the event should only be triggerd if it has passed the maximum `timeout` for all the tags associated with the beacon's tags, `false` in case it should consider its timeout as the `timeout`
+|  type | LHEventType  | a switch between `URL`, `Notification`, `Webhook`, `Image` and `Passbook`, which will correspond to the action to take when the user opens up the local notification triggered by the event.
+|  triggeredAt | NSDate  | a timestamp for when the event was last triggered.
+|  timeout | Int  | the timeout to which the framework should not trigger multiple times the same event.
+|  payload | String  | the content to use in the notification action.
+|  notificationMessage |  String  | the message to be presented to the user on the notification.
 
 ## Logging
 
