@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Lighthouse"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Lighthouse beacon technology by Passworks"
   s.homepage     = "http://passworks.io"
   s.license      = {
