@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "Lighthouse"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Lighthouse beacon technology by Passworks"
   s.homepage     = "http://passworks.io"
-  s.license      = { 
+  s.license      = {
     :type => 'Copyright',
     :file => 'LICENSE'
   }
