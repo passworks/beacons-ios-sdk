@@ -22,6 +22,7 @@
 - (LHTagModel *)tagModel;
 - (id)json;
 - (void)startSession;
+- (void)resetSession;
 
 @property (nonatomic, strong, readonly) NSArray *beacons;
 @property (nonatomic, strong, readonly) LHApp *app;
