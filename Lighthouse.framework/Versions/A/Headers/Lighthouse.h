@@ -134,6 +134,9 @@
  */
 @property (nonatomic, strong, readonly) NSArray *tags;
 
+@property (nonatomic) NSInteger networkMaxQueueSize;
+@property (nonatomic, readonly) NSInteger networkQueueSize;
+
 /**
  *  Use this function to enable or disable logging from the Lighthouse SDK
  *

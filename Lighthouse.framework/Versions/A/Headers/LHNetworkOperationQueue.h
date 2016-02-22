@@ -27,4 +27,7 @@
 - (void)finishedOperation:(LHNetworkOperation *)networkOperation;
 - (void)failedOperation:(LHNetworkOperation *)networkOperation;
 
+@property (nonatomic) NSInteger networkMaxQueueSize;
+@property (nonatomic, readonly) NSInteger networkQueueSize;
+
 @end
